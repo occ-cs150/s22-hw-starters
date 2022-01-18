@@ -21,7 +21,7 @@ run: $(EXE)
 debug: $(EXE)
 	debug50 ./$(EXE)
 
-est: $(EXE)
+test: $(EXE)
 	@git add $(SRC) > /dev/null 2> errors.txt; true
 	@git commit -m "auto commit `date +"%x %X"`"  > /dev/null 2>> errors.txt; true
 	@cat errors.txt 2> /dev/null; true
